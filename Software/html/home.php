@@ -56,30 +56,43 @@ if (!isset($_SESSION['loggedin'])) {
             <h1 class="mt-4">Humidistat IoT Project</h1>
             <p class="text-sm">By Gordon Deacon (1803716@uad.ac.uk)</p>
             <p>Please allow 30 seconds for updates</p>
-            <div class="row bg-dark text-white">
-                <div class="col border"><h2>Temperature (C)</h2></div>
-                <div class="col border"><h2>Humidity (%)</h2></div>
-                <div class="col border"><h2>LUX (lx)</h2></div>
-                <div class="col border"><h2>VPD (KPa)</h2></div>
-            </div>
-            <div class="row">
-                <div class="col border py-4" id="tempSection"></div>
-                <div class="col border py-4" id="humSection"></div>
-                <div class="col border py-4" id="luxSection"></div>
-                <div class="col border py-4" id="vpdSection"></div>
-            </div>
-            <div class="row bg-dark text-white">
-                <div class="col border"><h2>Avg. Temp (C)</h2></div>
-                <div class="col border"><h2>Avg. RH (%)</h2></div>
-                <div class="col border"><h2>Avg. LUX (lx)</h2></div>
-                <div class="col border"><h2>Avg. VPD (KPa)</h2></div>
-            </div>
-            <div class="row">
-                <div class="col border py-4" id="avgTempSection"></div>
-                <div class="col border py-4" id="avgHumSection"></div>
-                <div class="col border py-4" id="avgLuxSection"></div>
-                <div class="col border py-4" id="avgVPDSection"></div>
-            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Temperature (C)</th>
+                        <th>Humidity</th>
+                        <th>LUX</th>
+                        <th>VPD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="tempSection"></th>
+                        <th id="humSection"></th>
+                        <th id="luxSection"></th>
+                        <th id="vpdSection"></th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Avg. Temp (C)</th>
+                        <th>Avg. RH</th>
+                        <th>Avg. LUX</th>
+                        <th>Avg. VPD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="avgTempSection"></th>
+                        <th id="avgHumSection"></th>
+                        <th id="avgLUXSection"></th>
+                        <th id="avgVPDSection"></th>
+                    </tr>
+                </tbody>
+            </table>
         </div>
             <script type="text/javascript">
                 mqttConnect();
